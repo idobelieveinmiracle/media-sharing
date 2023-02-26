@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "334988442015",
+    "project_id": "insta-2-76afe",
+    "storage_bucket": "insta-2-76afe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:334988442015:android:55f7ddaa1abaad7b8765aa",
+        "android_client_info": {
+          "package_name": "com.rooze.insta_2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "334988442015-kbe6dtden09mia4a8le31klkvajje3q9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3HkUnghgAJ18KB1h1Pp5a7y1Kt4xr8Zo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "334988442015-kbe6dtden09mia4a8le31klkvajje3q9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
