@@ -78,7 +78,7 @@ class PostsListFragment : Fragment(), PostsListListener {
     }
 
     override fun openAccount(accountId: String) {
-        findNavController().navigate(R.id.userProfileFragment, bundleOf("accountId" to accountId))
+        findNavController().navigate(R.id.launch_profile, bundleOf("accountId" to accountId))
     }
 
 }

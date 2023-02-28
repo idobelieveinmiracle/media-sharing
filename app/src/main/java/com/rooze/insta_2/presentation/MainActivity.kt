@@ -9,7 +9,6 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.os.bundleOf
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import com.rooze.insta_2.R
@@ -55,10 +54,7 @@ class MainActivity : AppCompatActivity() {
     private fun observeViewModel() {
         viewModel.showLogin.collectWhenActive(this) { showLogin ->
             if (showLogin && navController.currentDestination?.id != R.id.loginFragment) {
-                when (navController.currentDestination?.id) {
-                    R.id.postsListFragment -> navController.navigate(R.id.launch_login_from_posts_list)
-                    R.id.userProfileFragment -> navController.navigate(R.id.launch_login_from_profile)
-                }
+                navController.navigate(R.id.launch_login)
             }
         }
         viewModel.onOpenPost.collectWhenActive(this) { postId ->
@@ -81,13 +77,13 @@ class MainActivity : AppCompatActivity() {
         }
         binding.postsNavButton.setOnClickListener {
             if (navController.currentDestination?.id != R.id.postsListFragment) {
-                navController.navigate(R.id.postsListFragment)
+                navController.navigate(R.id.launch_posts_list)
             }
         }
         binding.profileNavButton.setOnClickListener {
             if (navController.currentDestination?.id != R.id.userProfileFragment) {
                 navController.navigate(
-                    R.id.userProfileFragment,
+                    R.id.launch_profile,
                     bundleOf("accountId" to viewModel.currentAccount.value?.id)
                 )
             }
